@@ -38,4 +38,9 @@ public class OwnerImplementationTest {
         assertEquals(previousSize + 1, updatedSize);
         assertNotEquals(true, testUser.getOwnedPets().isEmpty());
     }
+
+    @Test
+    void testThatShouldFail(){
+        assertEquals(true,false);
+    }
 }
