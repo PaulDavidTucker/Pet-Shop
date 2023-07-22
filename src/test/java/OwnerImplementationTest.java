@@ -4,6 +4,8 @@ import Types.Dog;
 import Types.Owner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -30,7 +32,10 @@ public class OwnerImplementationTest {
     @Test
     void addingANewPetToArrayList(){
         int previousSize = testUser.getOwnedPets().size();
+        testUser.addNewPetToCurrentlyOwnedList(testPet);
+        int updatedSize = testUser.getOwnedPets().size();
 
-
+        assertEquals(previousSize + 1, updatedSize);
+        assertNotEquals(true, testUser.getOwnedPets().isEmpty());
     }
 }
