@@ -16,7 +16,6 @@ public class OwnerImplementationTest {
     Dog testPet;
     @BeforeEach
     void setUp(){
-
         testUser = new Owner("Test User", 22);
         testBreed = new Breed("Springer Spaniel");
         testPet = new Dog(testBreed, 3, "Max", 15.5, testUser);
@@ -37,10 +36,5 @@ public class OwnerImplementationTest {
 
         assertEquals(previousSize + 1, updatedSize);
         assertNotEquals(true, testUser.getOwnedPets().isEmpty());
-    }
-
-    @Test
-    void testThatShouldFail(){
-        assertEquals(true,false);
     }
 }
