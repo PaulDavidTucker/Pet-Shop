@@ -13,6 +13,26 @@ public abstract class Animal {
     private double weight;
     private Owner owner;
 
+    public Breed getBreed() {
+        return breed;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public Owner getOwner() {
+        return owner;
+    }
+
     public Animal(Breed breed, Integer age, String name, double weight, Owner owner) {
         this.breed = breed;
         this.age = age;
