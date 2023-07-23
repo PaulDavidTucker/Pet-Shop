@@ -9,21 +9,11 @@ public class Main {
         Breed breed = new Breed("Test");
         Owner owner = new Owner("Paul", 20);
 
-        System.out.println(owner.getOwnedPets());
-
         Dog test = new Dog(breed, 4, "dog", 22.2, null);
-        Dog test2 = new Dog(breed, 4, "dog", 22.2, null);
-
-        System.out.println(owner.getOwnedPets());
+        Dog test2 = new Dog(breed, 4, "other dog", 22.2, null);
 
         owner.addNewPetToCurrentlyOwnedList(test);
-
-        System.out.println(owner.getOwnedPets());
-
-        owner.removePetFromCurrentList(test);
-
-        System.out.println(owner.getOwnedPets());
-
-        owner.removePetFromCurrentList(test2);
+        owner.addNewPetToCurrentlyOwnedList(test2);
+        owner.printCurrentlyOwnedPets();
     }
 }

@@ -34,7 +34,15 @@ public class Owner extends User implements OwnerBehaviour {
     @Override
     public void removePetFromCurrentList(Animal petToRemove){
         boolean containedListThisPet = this.OwnedPets.remove(petToRemove);
+    }
 
+    public List<String> printCurrentlyOwnedPets(){
+        ArrayList<String> listOfNames = new ArrayList<>();
+        for (Animal Pet:this.getOwnedPets()) {
+            System.out.println(Pet.getName());
+            listOfNames.add(Pet.getName());
+        }
+        return listOfNames;
     }
 
 }
